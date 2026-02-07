@@ -1,5 +1,3 @@
----
-
 ## Design Philosophy
 - **Pure bare-metal implementation** (no HAL / no LL)
 - **CMSIS-style organisation** (Inc/Src separation)
@@ -39,7 +37,7 @@ The drivers are written to be easily integrated into custom bare-metal projects 
 
 ## Interrupt Handling Strategy
 - **GPIO interrupts** (EXTI + NVIC) are **fully implemented** inside the driver
-- **SPI, I2C, and USART** drivers are written to be **interrupt-capable**, but:
+- **SPI, I2C, and USART** drivers are designed to support interrupts, but:
   - Interrupt enablement
   - ISR linking
   - Application-level handling  
